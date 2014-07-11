@@ -1,0 +1,40 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Bundler config.
+/.bundle
+
+# All logfiles and tempfiles.
+/log/*.log
+/tmp
+
+# Foreman .env files
+*.env
+
+# Bundler binstubs
+/bin/*
+
+# Database config
+/config/database.yml
+
+# Mac .DS_Store files
+.DS_Store
+
+# RSpec configuration
+/.rspec
+
+# VI swp files
+*.swp
+
+# Uploaded attachments
+/public/uploads
+
+# When people accidentally put images in /public
+/public/images
+.ruby-version
+
+# Sublime project files
+*.sublime-*
+
+config/vagrant/phantomjs-1.9.7-*
+
+*.dump
