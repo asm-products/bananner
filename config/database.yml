@@ -1,0 +1,19 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: bananner_development
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: bananner_test
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: bananner_production
+  username: bananner
+  password: <%= ENV['BANANNER_DATABASE_PASSWORD'] %>
