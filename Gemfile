@@ -4,6 +4,7 @@ ruby '2.1.1'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.2.0'
+gem 'devise'
 gem 'jquery-rails'
 gem 'pg'
 gem 'rails', '4.1.2'
