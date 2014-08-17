@@ -1,2 +1,163 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+$BLUE:      #1AB2E5;
+$DARK-BLUE: #417D8F;
+$DARK:      #324456;
+$GREEN:     #78D757;
+$BG:        #F5F5F5;
+
+$font-stack: "Lato", "Helvetica Neue", Helvetica, sans-serif;
+
+$footerHeight: 4em;
+
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+body {
+  margin-bottom: $footerHeight;
+}
+html, body {
+  background: $BG;
+  font-family: $font-stack;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Buttons */
+.btn {
+  border: 0;
+  border-radius: 8px;
+  color: #FFF;
+  font-weight: 600;
+  letter-spacing: 0.04rem;
+  outline: 0;
+  padding: 10px 20px;
+  text-transform: uppercase;
+
+  &:active {
+    color: darken(white, 2%);
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  &.btn-primary {
+    background: $GREEN;
+
+    &:hover {
+      background: lighten($GREEN, 4%);
+    }
+  }
+
+  &.btn-default {
+    background: $DARK-BLUE;
+
+    &:hover {
+      background: lighten($DARK-BLUE, 4%);
+    }
+  }
+}
+
+
+/* Big Ol" Blue Header */
+.header {
+  background: $BLUE;
+  padding: 25px 0 0;
+
+  .jumbotron h1 {
+    color: #FFF;
+    font-size: 1.85em;
+    margin-top: 4rem;
+    text-shadow: 0 1px 1px darken($BLUE, 5%);
+  }
+  .editor {
+    background: #333333;
+    border-radius: 10px 10px 0 0;
+    min-height: 300px;
+
+    button {
+      position: relative;
+      right: 5px;
+      top: 254px;
+    }
+  }
+}
+
+
+.featurette {
+  border-bottom: 1px darken($BG, 10%) solid;
+  padding: 35px 0;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  h2 {
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  p {
+    color: darken($BG, 65%);
+    font-size: 1.2em;
+    line-height: 140%;
+  }
+
+  .panel {
+    border: 1px darken($BG, 6%) solid;
+    padding: 10px;
+
+    h3 {
+      margin-top: 0;
+      text-transform: uppercase;
+    }
+
+    button {
+      margin-top: 1rem;
+    }
+  }
+}
+
+/* Footer */
+.footer {
+  background: #FFF;
+  border-top: 1px darken($BG, 8%) solid;
+  bottom: 0;
+  height: $footerHeight;
+  position: absolute;
+  width: 100%;
+
+  p {
+    color: darken($BG, 25%);
+    line-height: $footerHeight;
+  }
+
+  ul, p {
+    margin-bottom: 0;
+  }
+
+  ul li {
+    line-height: $footerHeight;
+    padding-right: 15px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  ul li a {
+    color: darken($BG, 25%);
+    font-size: 1.15em;
+    text-decoration: none;
+
+    &:hover {
+      color: darken($BG, 35%);
+    }
+
+    &:active {
+      color: darken($BG, 45%);
+    }
+  }
+}

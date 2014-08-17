@@ -1,15 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="/favicon.ico">
+
   <title>Bananner</title>
+
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Lato:400">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 </head>
 <body>
 
-<%= render 'application/flashes' %>
-<%= yield %>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <header>
+          <a href="#">
+            <img src="http://i.imgur.com/fi5izaK.png" height="22" width="155" alt="Bananner" />
+          </a>
+          <!--<nav>
+            <a href="#menu" class="border-menu"></a>
+            <a href="#features">FEATURES</a>
+            <a href="#pricing">PRICING</a>
+            <a href="#">CONTACT</a>
+          </nav>-->
+	</header>
+      </div>
 
+      <%= yield :head %>
+
+    </header>
+
+    <%= render 'application/flashes' %>
+
+    <%= yield %>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="container">
+	<div class="row">
+	  <div class="col-sm-6">
+	    <ul class="list-inline">
+	      <li><a href='#'>About</a></li>
+	      <li><a href='#'>TOS</a></li>
+	      <li><a href='#'>Privacy</a></li>
+	    </ul>
+	  </div>
+	  <div class="col-sm-6">
+	    <p class="text-muted text-right">&copy; 2014 Bananner, Inc. All rights reserved</p>
+	  </div>
+	</div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
